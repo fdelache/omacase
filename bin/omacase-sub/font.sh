@@ -19,7 +19,7 @@ set_font() {
 
 	# Update Alacritty configuration
 	#cp "$OMACASE_PATH/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
-	sed -i '' "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/Library/Application\ Support/Code/User/settings.json
+	sed -i .bak "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/Library/Application\ Support/Code/User/settings.json
 }
 
 if [ "$#" -gt 1 ]; then
