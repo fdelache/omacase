@@ -11,7 +11,6 @@ if [[ -n "$THEME" && "$THEME" != "<<-back" ]]; then
   sed -i .bak "s/theme \".*\"/theme \"$THEME\"/g" ~/.config/zellij/config.kdl
   cp "$OMACASE_PATH/themes/$THEME/neovim.lua" ~/.config/nvim/lua/plugins/theme.lua
 
-  source "$OMACASE_PATH/themes/$THEME/tophat.sh"
   source "$OMACASE_PATH/themes/$THEME/vscode.sh"
 
   # Forgo setting the Chrome theme until we might find a less disruptive way of doing it.
