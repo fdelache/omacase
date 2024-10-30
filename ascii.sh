@@ -21,7 +21,7 @@ colors=(
 IFS=$'\n' read -rd '' -A lines <<<"$ascii_art"
 
 # Print each line with the corresponding color
-for i in "${!lines[@]}"; do
-  color_index=$((i % ${#colors[@]}))
-  echo "${colors[color_index]}${lines[i]}"
+for i in {1..${#lines[@]}}; do
+  color_index=$(( (i - 1) % ${#colors[@]} ))  # Adjusting index for 1-based loop
+  echo "${colors[color_index]}${lines[i-1]}"  # Adjusting for 0-based index in lines
 done
