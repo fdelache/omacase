@@ -1,0 +1,5 @@
+source ~/.local/share/omacase/defaults/zsh/shell
+source ~/.local/share/omacase/defaults/zsh/aliases
+source ~/.local/share/omacase/defaults/zsh/prompt
+source ~/.local/share/omacase/defaults/zsh/init
+source ~/.local/share/omacase/defaults/zsh/dev

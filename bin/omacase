@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source $OMACASE_PATH/ascii.sh
+echo "" # Add spacing
+echo "                                 $(cat $OMACASE_PATH/version)"
+echo "" # Add spacing
+source $OMACASE_PATH/bin/omacase-sub/menu.sh

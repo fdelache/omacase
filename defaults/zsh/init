@@ -1,0 +1,30 @@
+# Enable case-insensitive completion
+zstyle ':completion:*' ignore-case yes
+
+# Set completion prefix display length
+zstyle ':completion:*' prefix-display-length 2
+
+# Show all completions if ambiguous or unmodified
+zstyle ':completion:*' show-all-if-ambiguous true
+zstyle ':completion:*' show-all-if-unmodified true
+
+# Arrow keys for history search
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+bindkey '^[[C' forward-char
+bindkey '^[[D' backward-char
+
+# Do not autocomplete hidden files unless the pattern explicitly begins with a dot
+zstyle ':completion:*' match-hidden-files false
+
+# Show all autocomplete results at once
+setopt no_list_ambiguous
+
+# If there are more than 200 possible completions for a word, ask to show them all
+zstyle ':completion:*' max-errors 200
+
+# Show extra file information when completing, like `ls -F` does
+zstyle ':completion:*' visible-stats true
+
+# Enable intelligent completion
+setopt complete_in_word

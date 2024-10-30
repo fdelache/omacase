@@ -1,0 +1,9 @@
+# Enable color prompt
+autoload -Uz colors && colors
+
+# Simple prompt with path in the window/pane title and caret for typing line
+# Set the window title to the current working directory
+precmd() { print -Pn "\e]0;%~\a" }
+
+# Set the prompt
+PROMPT="%{$fg[cyan]%}➜ %{$reset_color%}"

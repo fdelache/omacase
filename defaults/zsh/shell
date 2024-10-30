@@ -1,0 +1,17 @@
+# History control
+setopt APPEND_HISTORY  # Equivalent to shopt -s histappend
+HISTCONTROL=ignoreboth  # Zsh uses this variable as well
+HISTSIZE=32768
+SAVEHIST=$HISTSIZE  # Zsh uses SAVEHIST instead of HISTFILESIZE
+
+# Load Zsh completion system
+autoload -Uz compinit
+compinit
+
+# Set complete path
+export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$PATH"
+
+# Disable hashall (optional, as it is not usually needed)
+set +h
+
+export OMAKUB_PATH="$HOME/.local/share/omakub"  # Use $HOME for portability
