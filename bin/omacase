@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 source $OMACASE_PATH/ascii.sh
 echo "" # Add spacing

@@ -1,4 +1,4 @@
-# Configure the bash shell using Omacase defaults
+# Configure the zsh shell using Omacase defaults
 [ -f "~/.zshrc" ] && mv ~/.zshrc ~/.zshrc.bak
 cp ~/.local/share/omacase/configs/zshrc ~/.zshrc
 
