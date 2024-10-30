@@ -4,7 +4,9 @@ set -e
 # Check the distribution name and version and abort if incompatible
 source ~/.local/share/omacase/install/check-version.sh
 
-echo "Only installing terminal tools..."
+echo "Installing terminal and desktop tools..."
 
 # Install terminal tools
 source ~/.local/share/omacase/install/terminal.sh
+
+source ~/.local/share/omacase/install/desktop.sh
