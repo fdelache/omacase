@@ -18,7 +18,7 @@ colors=(
 )
 
 # Split the ASCII art into lines
-IFS=$'\n' read -rd '' -a lines <<<"$ascii_art"
+IFS=$'\n' read -rd '' -A lines <<<"$ascii_art"
 
 # Print each line with the corresponding color
 for i in "${!lines[@]}"; do
