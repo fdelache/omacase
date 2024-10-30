@@ -18,8 +18,8 @@ set_font() {
 	# For example, if you're using iTerm2, you can set the font in its preferences.
 
 	# Update Alacritty configuration
-	cp "$OMACASE_PATH/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
-	sed -i '' "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.json
+	#cp "$OMACASE_PATH/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
+	sed -i '' "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/Library/Application\ Support/Code/User/settings.json
 }
 
 if [ "$#" -gt 1 ]; then
