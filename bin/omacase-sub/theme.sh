@@ -8,7 +8,7 @@ THEME=$(gum choose "${THEME_NAMES[@]}" "<< Back" --header "Choose your theme" --
 if [[ -n "$THEME" && "$THEME" != "<<-back" ]]; then
   # cp "$OMACASE_PATH/themes/$THEME/alacritty.toml" ~/.config/alacritty/theme.toml
   cp "$OMACASE_PATH/themes/$THEME/zellij.kdl" ~/.config/zellij/themes/$THEME.kdl
-  sed -i "s/theme \".*\"/theme \"$THEME\"/g" ~/.config/zellij/config.kdl
+  sed -i .bak "s/theme \".*\"/theme \"$THEME\"/g" ~/.config/zellij/config.kdl
   cp "$OMACASE_PATH/themes/$THEME/neovim.lua" ~/.config/nvim/lua/plugins/theme.lua
 
   source "$OMACASE_PATH/themes/$THEME/tophat.sh"
