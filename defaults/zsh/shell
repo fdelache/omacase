@@ -9,9 +9,6 @@ autoload -Uz compinit
 compinit
 
 # Set complete path
-export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$PATH"
+export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omacase/bin:$PATH"
 
-# Disable hashall (optional, as it is not usually needed)
-set +h
-
-export OMAKUB_PATH="$HOME/.local/share/omakub"  # Use $HOME for portability
+export OMACASE_PATH="$HOME/.local/share/omacase"  # Use $HOME for portability
