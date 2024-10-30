@@ -14,6 +14,15 @@ bindkey '^[[B' history-search-forward
 bindkey '^[[C' forward-char
 bindkey '^[[D' backward-char
 
+# Alt Arrow keys for navigate by words
+bindkey '^[^[[C' forward-word
+bindkey '^[^[[D' backward-word
+
+# Home and End keys
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+bindkey '^[[3~'  delete-char
+
 # Do not autocomplete hidden files unless the pattern explicitly begins with a dot
 zstyle ':completion:*' match-hidden-files false
 
