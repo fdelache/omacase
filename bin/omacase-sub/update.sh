@@ -15,7 +15,7 @@ else
 	INSTALLER=$(echo "$CHOICE" | awk -F ' {2,}' '{print $1}' | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 	case "$INSTALLER" in
-	"omacaswe") INSTALLER_FILE="$OMACASE_PATH/bin/omacase-sub/migrate.sh" ;;
+	"omacase") INSTALLER_FILE="$OMACASE_PATH/bin/omacase-sub/migrate.sh" ;;
 	*) INSTALLER_FILE="$OMACASE_PATH/install/terminal/app-$INSTALLER.sh" ;;
 	esac
 
