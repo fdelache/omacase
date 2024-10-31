@@ -23,6 +23,15 @@
 	push-pull-request = "!sh -c \"git push -u origin `git rev-parse --abbrev-ref HEAD` && hub pull-request $*\""
 	gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
 
+  # `git log` with patches shown with difftastic.
+  dl = -c diff.external=difft log -p --ext-diff
+
+  # Show the most recent commit with difftastic.
+  ds = -c diff.external=difft show --ext-diff
+
+  # `git diff` with difftastic.
+  dft = -c diff.external=difft diff
+
 [diff]
 	noprefix = true
 [pull]
