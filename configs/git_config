@@ -1,0 +1,36 @@
+[core]
+	editor = nvim
+	pager = less --quit-if-one-screen --no-init
+	autocrlf = input
+
+[rebase]
+	autosquash = true
+	updateRefs = true
+
+[rerere]
+	enabled = 1
+
+[alias]
+	up = pull --rebase --autostash
+	st = status
+	br = branch
+	co = checkout
+	df = diff
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	lg = !"git lg1"
+	prune-locals = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
+	push-pull-request = "!sh -c \"git push -u origin `git rev-parse --abbrev-ref HEAD` && hub pull-request $*\""
+	gone = ! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
+
+[diff]
+	noprefix = true
+[pull]
+	rebase = true
+[push]
+	default = current
+	autoSetupRemote = true
+[help]
+	autoCorrect = 1
+[init]
+	defaultBranch = main
