@@ -2,12 +2,11 @@
 THEME_NAMES=("Tokyo Night" "Catppuccin" "Nord" "Everforest" "Gruvbox" "Kanagawa" "Rose Pine")
 
 # Use gum to choose a theme and process the output
-CHOSEN_THEME=$(gum choose "${THEME_NAMES[@]}" "<< Back" --header "Choose your theme" --height 10)
-THEME=$(echo $CHOSEN_THEME | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+THEME=$(gum choose "${THEME_NAMES[@]}" "<< Back" --header "Choose your theme" --height 10 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
 # Check if THEME is not empty and not "<< Back"
 if [[ -n "$THEME" && "$THEME" != "<<-back" ]]; then
-  kitten themes --reload-in=all $CHOSEN_THEME
+  kitten themes --reload-in=all $(cat $OMACASE_PATH/themes/$THEME/kitty-name.theme)
   cp "$OMACASE_PATH/themes/$THEME/zellij.kdl" ~/Library/Application\ Support/org.Zellij-Contributors.Zellij/themes/$THEME.kdl
   sed -i .bak "s/theme \".*\"/theme \"$THEME\"/g" ~/Library/Application\ Support/org.Zellij-Contributors.Zellij/config.kdl
   cp "$OMACASE_PATH/themes/$THEME/neovim.lua" ~/.config/nvim/lua/plugins/theme.lua
