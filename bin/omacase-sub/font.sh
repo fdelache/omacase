@@ -17,8 +17,8 @@ set_font() {
 	# Note: macOS does not use gsettings. You may need to set the font in your terminal emulator settings manually.
 	# For example, if you're using iTerm2, you can set the font in its preferences.
 
-	# Update Alacritty configuration
-	#cp "$OMACASE_PATH/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
+	# Update Kitty configuration
+	cp "$OMACASE_PATH/configs/kitty/fonts/$file_name.conf" ~/.config/kitty/font.conf
 	sed -i .bak "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/Library/Application\ Support/Code/User/settings.json
 }
 
