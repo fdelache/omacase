@@ -19,6 +19,7 @@ set_font() {
 
 	# Update Kitty configuration
 	cp "$OMACASE_PATH/configs/kitty/fonts/$file_name.conf" ~/.config/kitty/font.conf
+	kill -SIGUSR1 $(pgrep -a kitty)
 	sed -i .bak "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/Library/Application\ Support/Code/User/settings.json
 }
 
