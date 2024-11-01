@@ -1,1 +1,1 @@
-brew install fzf ripgrep bat eza zoxide btop fd tldr
+brew install fzf ripgrep bat eza zoxide btop fd tldr rename
