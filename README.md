@@ -13,7 +13,7 @@ wget -qO- https://raw.githubusercontent.com/fdelache/omacase/refs/heads/main/boo
 
 # Usage
 Once Omacase has been installed, you can configure it using the `omacase` command.
-![omacase-demo](https://github.com/user-attachments/assets/ecbe9621-7591-446c-b220-0363c0bc0fd5)
+![omacase-demo](https://github.com/user-attachments/assets/8c97f835-ace3-45e6-bc81-1daf15ead7b0)
 
 ## License
 
