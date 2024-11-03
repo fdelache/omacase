@@ -8,7 +8,7 @@ This is a fork of [Omakub](https://omakub.org/) adapted to the MacOs and its zsh
 
 Run the following to install Omacase for the first time
 ```
-wget -qO- https://raw.githubusercontent.com/fdelache/omacase/refs/heads/main/boot.sh | zsh
+curl -sSL https://franck.isalazy.dev/omacase/install | zsh
 ```
 
 # Usage
