@@ -18,7 +18,7 @@ if brew --version 2>&1; then
 	echo "Homebrew installed!"
 else
 	echo "Installing Homebrew..."
-	/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo "Cloning Omacase..."
