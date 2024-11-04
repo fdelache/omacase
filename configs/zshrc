@@ -3,3 +3,5 @@ source ~/.local/share/omacase/defaults/zsh/rc
 # Editor used by CLI
 export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
+
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
