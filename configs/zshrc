@@ -5,3 +5,5 @@ export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+
+[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
