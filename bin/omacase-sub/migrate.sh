@@ -4,7 +4,7 @@ git pull
 
 for file in $OMACASE_PATH/migrations/*.sh; do
   filename=$(basename "$file")
-  migrate_at="${filename%.sh}"
+  migrate_at="${filename:r}"
 
   if [ $migrate_at -gt $last_updated_at ]; then
     echo "Running migration for $migrate_at"
