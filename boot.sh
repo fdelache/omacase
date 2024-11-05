@@ -19,6 +19,7 @@ if brew --version 2>&1; then
 else
 	echo "Installing Homebrew..."
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
 echo "Cloning Omacase..."
