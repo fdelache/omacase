@@ -4,3 +4,5 @@ source ~/.local/share/omacase/defaults/zsh/prompt
 source ~/.local/share/omacase/defaults/zsh/init
 source ~/.local/share/omacase/defaults/zsh/zoxide
 source ~/.local/share/omacase/defaults/zsh/rubymine
+
+[ -f ~/.zshenv ] && source ~/.zshenv
