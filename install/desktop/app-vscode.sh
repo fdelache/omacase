@@ -6,3 +6,6 @@ cp ~/.local/share/omacase/configs/vscode/keybindings.json ~/Library/Application\
 
 # Install default supported themes
 code --install-extension enkia.tokyo-night
+
+# Install default extension pack for Ruby development
+code --install-extension shopify.ruby-extensions-pack
