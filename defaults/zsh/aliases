@@ -23,9 +23,7 @@ alias lzg='lazygit'
 alias lzd='lazydocker'
 
 # Git
-alias gcm='git commit -m'
-alias gcam='git commit -a -m'
-alias gcad='git commit -a --amend'
+alias gcm='git co main'
 alias gl='git pull'
 
 # Compression
