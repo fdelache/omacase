@@ -1,0 +1,1 @@
+source $OMACASE_PATH/install/terminal/zsh-plugins.sh
