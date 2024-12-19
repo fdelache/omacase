@@ -1,0 +1,2 @@
+fpath=(~/.zsh/functions $fpath)
+autoload -Uz ~/.zsh/functions/[^_]*(.:t)

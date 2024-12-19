@@ -4,5 +4,6 @@ source ~/.local/share/omacase/defaults/zsh/prompt
 source ~/.local/share/omacase/defaults/zsh/init
 source ~/.local/share/omacase/defaults/zsh/zoxide
 source ~/.local/share/omacase/defaults/zsh/plugins
+source ~/.local/share/omacase/defaults/zsh/functions
 
 [ -f ~/.zshenv ] && source ~/.zshenv
