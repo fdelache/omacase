@@ -1,4 +1,4 @@
 fpath=(~/.zsh/functions $fpath)
 if [ -n "$(ls -A ~/.zsh/functions/ 2>/dev/null)" ]; then
   autoload -Uz ~/.zsh/functions/[^_]*(.:t)
-f
+fi
