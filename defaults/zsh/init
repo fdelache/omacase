@@ -23,6 +23,9 @@ bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 bindkey '^[[3~'  delete-char
 
+# Keep emacs keybindings when in zellij
+bindkey -e
+
 # Do not autocomplete hidden files unless the pattern explicitly begins with a dot
 zstyle ':completion:*' match-hidden-files false
 
