@@ -1,9 +1,57 @@
 # Enable color prompt
 autoload -Uz colors && colors
 
-# Simple prompt with path in the window/pane title and caret for typing line
-# Set the window title to the current working directory
-precmd() { print -Pn "\e]0;%~\a" }
+# Enable prompt substitution for dynamic content
+setopt PROMPT_SUBST
+
+# Capture command start time
+preexec() {
+  cmd_start_time=$SECONDS
+}
+
+# Update window title and calculate command execution time
+precmd() {
+  local exit_code=$?
+
+  # Set the window title to the current working directory
+  print -Pn "\e]0;%~\a"
+
+  # Calculate and format command execution time
+  if [[ -n $cmd_start_time ]]; then
+    local duration=$((SECONDS - cmd_start_time))
+    local duration_display=""
+    local time_color=""
+
+    # Format duration based on length
+    if (( duration < 1 )); then
+      duration_display="${duration}s"
+    elif (( duration < 60 )); then
+      duration_display="${duration}s"
+    elif (( duration < 3600 )); then
+      local mins=$((duration / 60))
+      local secs=$((duration % 60))
+      duration_display="${mins}m${secs}s"
+    else
+      local hours=$((duration / 3600))
+      local mins=$(((duration % 3600) / 60))
+      duration_display="${hours}h${mins}m"
+    fi
+
+    # Color based on exit code (green for success, red for failure)
+    if (( exit_code == 0 )); then
+      time_color="%F{green}"
+    else
+      time_color="%F{red}"
+    fi
+
+    LAST_CMD_TIME="${time_color}[${duration_display}]%f"
+
+    unset cmd_start_time
+  else
+    LAST_CMD_TIME=""
+  fi
+}
 
 # Set the prompt
 PROMPT="%{$fg[cyan]%}➜ %{$reset_color%}"
+RPROMPT='${LAST_CMD_TIME}'
