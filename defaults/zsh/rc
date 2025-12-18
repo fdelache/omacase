@@ -7,3 +7,4 @@ source ~/.local/share/omacase/defaults/zsh/plugins
 source ~/.local/share/omacase/defaults/zsh/functions
 
 [ -f ~/.zshenv ] && source ~/.zshenv
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
