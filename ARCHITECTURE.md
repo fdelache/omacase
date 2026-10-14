@@ -39,6 +39,7 @@ Omacase is a Zsh-based macOS development environment setup tool. It installs and
 │   │   ├── apps-terminal.sh      # Brew packages (fzf, ripgrep, bat, eza, etc.)
 │   │   ├── app-neovim.sh         # Neovim + LazyVim
 │   │   ├── app-zellij.sh         # Terminal multiplexer
+│   │   ├── app-herdr.sh          # Herdr workspace manager for coding agents
 │   │   └── ...
 │   └── desktop/                  # Desktop app installers
 │       ├── optional/             # User-selected optional apps
@@ -68,6 +69,7 @@ Omacase is a Zsh-based macOS development environment setup tool. It installs and
 │   ├── gitignore                 # Default gitignore
 │   ├── vscode/                   # VSCode settings
 │   ├── kitty/                    # Kitty sub-configs (fonts, sessions)
+│   ├── herdr/                    # Herdr config (cmd+k workspace cycling)
 │   └── neovim/                   # Neovim configs
 │
 ├── themes/                       # 7 coordinated themes

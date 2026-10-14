@@ -1,0 +1,8 @@
+# Herdr configuration (installed by Omacase, edit freely)
+# Full default config: herdr --default-config
+# Apply changes to a running server: herdr server reload-config
+
+[keys]
+# cmd+k / cmd+shift+k are freed in Kitty by Omacase's defaults/kitty.conf
+next_workspace = "cmd+k"
+previous_workspace = "cmd+shift+k"
